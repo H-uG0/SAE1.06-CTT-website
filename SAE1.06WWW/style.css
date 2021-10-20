@@ -2,6 +2,8 @@
 
 html{
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+	width : 100%;
 }
 
 *{
@@ -9,7 +11,7 @@ html{
 }
 
 body{
-	width : 100vw;
+	width : 100%;
 	height : auto;
 	display : flex;
 	flex-direction: column;
@@ -82,7 +84,7 @@ body{
 	top : 0;
 	right : -13em;
 	backdrop-filter : blur(5px);
-	background-color : rgba(251, 238, 193, 0.6);
+	background-color : rgba(251, 238, 193, 0.9);
 	transition : 0.7s all;
 	height : 100vh;
 	z-index : 250;
@@ -342,31 +344,41 @@ textarea{
 }
 
 @media all and (max-width: 500px) {
+	.header{
+	width : 100%;
+	height : calc(100vh - calc(14vh + 2em));
+	}
+
+	.navbar{
+	display : flex;
+	align-items: center;
+	justify-content: space-between;
+	height : 14vh;
+	width : 100%;
+	background-color: cornsilk;
+	font-weight: 900;
+	padding : 1em;
+	}
+
 	.navbar .titleWrap .mainTitle{
-		font-size: 5em;
+		font-size: 2.2em;
 	}
 
 	.navbar .titleWrap .subTitle{
 		font-weight: 900;
-		font-size: 3em;
+		font-size: 1.2em;
 	}
 	.navbar .navWidget .menuButton{
 		right : 5%;
 		top : 3%;
-		width : 15vw;
-		height : 15vw;
+		width : 20vw;
+		height : 20vw;
 	}
 	.navbar .navWidget .menu{
 		right : -55%;
 		width : 50%;
 	}
-	.headText h2{
-		font-size: 4em;
-	}
-
-	.headText p{
-		font-size: 3em;
-	}
+	
 	.callToAction{
 		width : 100%;
 	}
@@ -377,30 +389,34 @@ textarea{
 	}
 	
 	#two:hover + .twoLinks{
-		right : 100%;
-	}
-
-	.twoLinks:hover{
-		right : 100%;
+		display: none;
 	}
 
 	#three:hover + .threeLinks{
-		right : 100%;
-	}
-
-	.threeLinks:hover{
-		right : 100%;
+		display: none;
 	}
 
 	#four:hover + .fourLinks{
-		right : 100%;
+		display: none;
+	}
+	
+	.headText{
+		margin-right: 1em;
+		margin-left: 1em;
 	}
 
-	.fourLinks:hover{
-		right : 100%;
+	.reviewFormWrapper h1{
+		font-size: 1.2em;
+		margin-right: 0;
 	}
 
-	.underPart{
-		height : 40em;
+	.reviewFormWrapper{
+		align-items: center;
+	}
+
+	.stars label {
+		height : 20px;
+		width : 20px;
+		margin : 0;
 	}
 }
