@@ -340,3 +340,67 @@ textarea{
 	height : 15em;
 	overflow : scroll;
 }
+
+@media all and (max-width: 500px) {
+	.navbar .titleWrap .mainTitle{
+		font-size: 5em;
+	}
+
+	.navbar .titleWrap .subTitle{
+		font-weight: 900;
+		font-size: 3em;
+	}
+	.navbar .navWidget .menuButton{
+		right : 5%;
+		top : 3%;
+		width : 15vw;
+		height : 15vw;
+	}
+	.navbar .navWidget .menu{
+		right : -55%;
+		width : 50%;
+	}
+	.headText h2{
+		font-size: 4em;
+	}
+
+	.headText p{
+		font-size: 3em;
+	}
+	.callToAction{
+		width : 100%;
+	}
+	
+	.callToAction a{
+		width : 30%;
+		height : 10%;
+	}
+	
+	#two:hover + .twoLinks{
+		right : 100%;
+	}
+
+	.twoLinks:hover{
+		right : 100%;
+	}
+
+	#three:hover + .threeLinks{
+		right : 100%;
+	}
+
+	.threeLinks:hover{
+		right : 100%;
+	}
+
+	#four:hover + .fourLinks{
+		right : 100%;
+	}
+
+	.fourLinks:hover{
+		right : 100%;
+	}
+
+	.underPart{
+		height : 40em;
+	}
+}
