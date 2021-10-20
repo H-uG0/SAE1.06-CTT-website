@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+html{
+	scroll-behavior: smooth;
+}
+
+*{
+	margin : 0;
+}
+
+body{
+	width : 100vw;
+	height : auto;
+	display : flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
+}
+
+.navbar{
+	display : flex;
+	align-items: center;
+	justify-content: space-between;
+	height : 12vh;
+	width : 100%;
+	background-color: cornsilk;
+	font-weight: 900;
+	padding : 1em;
+}
+
+.navbar .titleWrap{
+	background-image: url(./img/titleBg.jpg);
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color : transparent;
+	margin : 1em;
+
+}
+
+.navbar .titleWrap .mainTitle{
+	font-size: 2.7em;
+}
+
+.navbar .titleWrap .subTitle{
+	font-weight: 900;
+	font-size: 1.5em;
+}
+
+.navbar .menuToggle{
+	display : none;
+}
+
+.navbar .navWidget .menuButton{
+	z-index : 250;
+	right : 1.8em;
+	top : 1.8em;
+	position : fixed;
+	width : 4em;
+	height : 4em;
+	background-color: green;
+	border-radius : 1em;
+	background: transparent;
+	box-shadow: inset 6px 6px 13px #999584,
+	            inset -6px -6px 13px #ffffff;
+	display : flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.navbar .navWidget .menuButton:hover{
+	background: linear-gradient(145deg, #ffffeb, #e6dfc6);
+	box-shadow:  6px 6px 13px #999584,
+             -6px -6px 13px #ffffff;
+}
+
+.navbar .navWidget .menu{
+	position : fixed;
+	top : 0;
+	right : -13em;
+	backdrop-filter : blur(5px);
+	background-color : rgba(251, 238, 193, 0.9);
+	transition : 0.7s all;
+	height : 100vh;
+	z-index : 250;
+	width : 10em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-right: 1em;
+}
+
+ul{
+	height : 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	list-style-type: none;
+	width : 100%
+}
+
+ul li{
+	width : 100%;
+	cursor: pointer;
+}
+
+ul li a{
+	width : 100%;
+	display : block;
+	margin-left : 0;
+	height : 5em;
+	overflow : word-break;
+}
+
+#menuToggle:checked + .menu {
+	animation: 1s ease-in;
+	position : fixed;
+	top : 0;
+	right : 0;
+	opacity : 1;
+}
+
+
+.header{
+	width : 100%;
+	height : calc(100vh - calc(12vh + 2em));
+	background-image: url(./img/header.jpg);
+	background-size : cover;
+	background-position: center;
+	display : flex;
+	flex-direction: column;
+	align-items :center;
+	justify-content: center;
+}
+
+.headText{
+	color: white;
+	margin-right : 4em;
+	margin-left : 4em;
+	text-align: justify;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding : 1em;
+	border-radius: 1em;
+}
+
+.headText h2{
+	font-size: 2em;
+}
+
+.callToAction{
+	display: flex;
+	align-items: center;
+	justify-content: space-around
+}
+
+.callToAction a{
+	color : black;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding : 0.5em;
+	margin : 0.5em;
+	border-radius: 999px;
+	width : 5em;
+	height : 1em;
+	font-size: 1.5em;
+	font-weight: 500;
+	background-color: rgba(255,255,255,0.5);
+	transition : 0.5s all;
+	text-decoration: none;
+}
+
+.callToAction a:hover{
+	background-color: rgba(255,255,255,0.7);
+}
+
+.reviewLink{
+	font-size: 16px;
+}
+
+.stars input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.stars label {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 6px;
+  height: 22px;
+  width: 22px;
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='transparent' stroke='yellow' stroke-width='38' d='M259.216 29.942L330.27 173.92l158.89 23.087L374.185 309.08l27.145 158.23-142.114-74.698-142.112 74.698 27.146-158.23L29.274 197.007l158.89-23.088z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  font-size: 0;
+  cursor: pointer;
+}
+
+.stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
+.stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
+.stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
+.stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4),
+.stars input:nth-child(5):checked ~ label:nth-of-type(-n + 5) {
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='yellow' stroke='yellow' stroke-width='38' d='M259.216 29.942L330.27 173.92l158.89 23.087L374.185 309.08l27.145 158.23-142.114-74.698-142.112 74.698 27.146-158.23L29.274 197.007l158.89-23.088z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.reviewFormWrapper{
+	width : 100%;
+	display : flex;
+	z-index : 0;
+	background-color: red;
+	height : 10em;
+	font-size: 2em;
+	text-align: justify;
+	background-image: url(./img/formBg.jpg);
+	background-size: cover;
+	background-position: center;
+	color : white;
+}
+
+.reviewFormWrapper h1{
+	margin: 0.5rem;
+}
+
+.reviewForm{
+	display : flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	min-width : 40%;
+	margin: 1rem;
+}
+
+input{
+	border-radius: 1em;
+	border : none;
+	padding : 1em;
+}
+
+textarea{
+	width : 100%;
+	border : none;
+	border-radius: 1em;
+}
+
+.secondaryLinks{
+	position : fixed;
+	z-index: 251;
+	width : 13em;
+	background-color: #BC986A;
+	display : flex;
+	align-items: center;
+	justify-content: space-evenly;
+	border-radius: 1em;
+	transition : 0.5s all;
+	display : none;
+	padding-left: 1em;
+}
+
+.secondaryLinks ul{
+	padding : 0;
+}
+
+.secondaryLinks ul li{
+	padding-right : 2em;
+}
+
+.secondaryLinks ul li a{
+	margin-top : 1em;
+	text-align: center;
+}
+
+.twoLinks{
+	top : 5em;
+	right : -20rem;
+}
+
+#two:hover + .twoLinks{
+	right : 11rem;
+	display : block;
+}
+
+.twoLinks:hover{
+	right : 11rem;
+	display : block;
+}
+
+.threeLinks{
+	top : 11em;
+	right : -20rem;
+}
+
+#three:hover + .threeLinks{
+	right : 11rem;
+	display : block;
+}
+
+.threeLinks:hover{
+	right : 11rem;
+	display : block;
+}
+
+.fourLinks{
+	top : 3em;
+	right : -20rem;
+}
+
+#four:hover + .fourLinks{
+	right : 11rem;
+	display : block;
+}
+
+.fourLinks:hover{
+	right : 11rem;
+	display : block;
+}
+
+.mainWrap{
+	background-color: cornsilk;
+	display: flex;
+	flex-direction: column;
+}
+
+.partCard{
+	margin-top: 3em;
+	padding : 3em;
+	background-color: white;
+	color : black;
+}
+
+.underPart{
+	margin: 1em 1em 0em 1em;
+	padding : 3em;
+	background-color: black;
+	color : white;
+	height : 15em;
+	overflow : scroll;
+}
