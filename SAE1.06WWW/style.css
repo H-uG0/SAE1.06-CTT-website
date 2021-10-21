@@ -387,7 +387,6 @@ textarea{
 .preco p{
 	margin-right : 2em;
 	display: none;
-	-webkit-background-clip : text;
 	backdrop-filter : blur(5px);
 	border-radius: 2em;
 	border : 2px solid rgba(30,30,30,0.8);
