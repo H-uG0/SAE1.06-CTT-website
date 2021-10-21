@@ -415,12 +415,11 @@ textarea{
 	display : flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: rgba(0,0,0,0.5);
 	width : 93%;
-	-webkit-background-clip : text;
 	backdrop-filter : blur(5px);
 	border-radius: 2em;
 	border : 2px solid rgba(30,30,30,0.8);
+	background-color: rgba(0,0,0,0.5);
 	margin-right: 2em;
 }
 
