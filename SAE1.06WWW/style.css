@@ -355,6 +355,7 @@ textarea{
 	width : 100%;
 	background-image: url(./img/precoBg.jpg);
 	background-size : cover;
+	background-position : fixed;
 	padding : 2em;
 	margin-bottom: 3em;
 	text-align: center;
@@ -376,8 +377,6 @@ textarea{
 .preco{
 	margin-top: 2em;
 	width : 100%;
-	background-color: #7a6141;
-	border-bottom: 1em solid #8D8741;
 	color : white;
 	padding : 1em;
 	text-align: center;
@@ -388,6 +387,13 @@ textarea{
 .preco p{
 	margin-right : 2em;
 	display: none;
+	-webkit-background-clip : text;
+	backdrop-filter : blur(5px);
+	border-radius: 2em;
+	border : 2px solid rgba(30,30,30,0.8);
+	margin-right: 2em;
+	background-color: rgba(0,0,0,0.5);
+	padding : 1em;
 }
 
 .showmore:checked + p{
@@ -400,7 +406,6 @@ textarea{
 	background-position: center right;
 	background-clip: text;
 	-webkit-background-clip : text;
-	backdrop-filter : blur(5px);
 	color : transparent;
 	margin : 1em;
 	font-size: 2.5em;
@@ -410,6 +415,13 @@ textarea{
 	display : flex;
 	justify-content: space-around;
 	align-items: center;
+	background-color: rgba(0,0,0,0.5);
+	width : 93%;
+	-webkit-background-clip : text;
+	backdrop-filter : blur(5px);
+	border-radius: 2em;
+	border : 2px solid rgba(30,30,30,0.8);
+	margin-right: 2em;
 }
 
 .showmore{
