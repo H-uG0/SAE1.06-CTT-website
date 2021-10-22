@@ -367,7 +367,7 @@ button{
 .preconisationWrap{
 	height : auto;
 	width : 100%;
-	background-image: url(./img/precoBg.jpg);
+	background: url(./img/precoBg.jpg);
 	background-size : cover;
 	background-position : fixed;
 	padding : 2em;
