@@ -124,6 +124,13 @@ ul li a{
 	margin-left : 0;
 	height : 5em;
 	overflow : word-break;
+	color : black;
+	text-decoration: none;
+}
+
+ul li a:visited{
+	text-decoration: line-through;
+	color : #555;
 }
 
 #menuToggle:checked + .menu {
@@ -387,6 +394,7 @@ textarea{
 .preco p{
 	margin-right : 2em;
 	display: none;
+	-webkit-background-clip : text;
 	backdrop-filter : blur(5px);
 	border-radius: 2em;
 	border : 2px solid rgba(30,30,30,0.8);
@@ -414,11 +422,12 @@ textarea{
 	display : flex;
 	justify-content: space-around;
 	align-items: center;
+	background-color: rgba(0,0,0,0.5);
 	width : 93%;
+	-webkit-background-clip : text;
 	backdrop-filter : blur(5px);
 	border-radius: 2em;
 	border : 2px solid rgba(30,30,30,0.8);
-	background-color: rgba(0,0,0,0.5);
 	margin-right: 2em;
 }
 
