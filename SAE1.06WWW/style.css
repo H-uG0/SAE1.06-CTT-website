@@ -425,7 +425,7 @@ button{
 	font-size: 2.5em;
 }
 
-.preco span{
+.preco .span{
 	display : flex;
 	justify-content: space-around;
 	align-items: center;
